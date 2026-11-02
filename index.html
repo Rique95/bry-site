@@ -57,10 +57,6 @@ p{margin:0 0 12px}
 .nav a:hover{color:var(--fg-hi);box-shadow:inset 0 -2px 0 var(--rule-strong)}
 .nav a[aria-current="page"]{color:var(--fg-hi);box-shadow:inset 0 -2px 0 var(--fg-hi)}
 
-.crumbs{padding:8px 28px;font-size:11px;color:var(--fg-dim);border-bottom:1px solid var(--rule-soft)}
-.crumbs a{color:var(--fg-dim)}
-.crumbs .sep{margin:0 6px}
-
 .content{padding:26px 28px 40px}
 h1{font:400 28px/1.2 var(--f-head);color:var(--fg-hi);margin:0 0 18px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
 h2{font:700 11px/1.3 var(--f-ui);text-transform:uppercase;letter-spacing:.1em;color:var(--fg-dim);
@@ -83,7 +79,7 @@ h2{font:700 11px/1.3 var(--f-ui);text-transform:uppercase;letter-spacing:.1em;co
 .facts dd{margin:0}
 .chip{display:inline-block;width:9px;height:9px;margin:0 5px 0 0;vertical-align:baseline}
 .facts .chip:not(:first-child){margin-left:10px}
-.index{list-style:none;margin:0;padding:0}
+.index{list-style:none;margin:0;padding:0 8px 0 0;max-height:280px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--rule-strong) var(--bg)}
 .index li{border-bottom:1px solid var(--rule-soft)}
 .index a{display:block;padding:6px 0;text-decoration:none}
 .index a:hover span{text-decoration:underline}
@@ -172,7 +168,7 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
   .values>div{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:560px){
-  .mast,.nav,.crumbs,.foot{padding-left:14px;padding-right:14px}
+  .mast,.nav,.foot{padding-left:14px;padding-right:14px}
   .content{padding:22px 14px 32px}
   .name{font-size:30px}
   h1{font-size:24px}
@@ -191,7 +187,6 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
 <p class="tag">Três cores. Nenhuma solução.</p>
 </header>
 <nav class="nav" aria-label="Principal"><a href="index.html" aria-current="page">Início</a><a href="departamentos.html">Departamentos</a><a href="episodios.html">Episódios</a></nav>
-<div class="crumbs">Você está em: <span>Início</span></div>
 <main class="content">
 
 <div class="cols">
@@ -214,12 +209,11 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
 <div><dt>Razão social</dt><dd>Bry</dd></div>
 <div><dt>Porte</dt><dd>Infinito fisicamente finito</dd></div>
 <div><dt>Atuação</dt><dd>Qualquer Lugar</dd></div>
-<div><dt>Cores institucionais</dt><dd><span class="chip b"></span>Azul<span class="chip y"></span>Vermelho<span class="chip r"></span>Amarelo</dd></div>
-<div><dt>Departamentos</dt><dd>6</dd></div>
+<div><dt>Grupos de funcionários</dt><dd><span class="chip b"></span>Azul<span class="chip r"></span>Vermelho<span class="chip y"></span>Amarelo</dd></div>
+<div><dt>Departamentos</dt><dd>Incalculável</dd></div>
 </dl>
 <h2>Departamentos</h2>
-<ul class="index"><li><a href="departamentos.html#dp-01"><code>DP-69</code><span>Dreams</span></a></li><li><a href="departamentos.html#dp-02"><code>DP-34</code><span>Departamento interno de animações animadas da Bry</span></a></li><li><a href="departamentos.html#dp-03"><code>DP-03</code><span>Departamento de coleta de dejetos</span></a></li><li><a href="departamentos.html#dp-04"><code>DP-24</code><span>Departamento de pessoas a se acalmar</span></a></li><li><a href="departamentos.html#dp-05"><code>DP-89</code><span>Departamento de massagem nas costas de corpos masculinos
-</span></a></li><li><a href="departamentos.html#dp-06"><code>DP-06</code><span>Departamento de regulamentação de mochilas infantis</span></a></li></ul>
+<ul class="index"><li><a href="departamentos.html#dp-69"><code>DP-69</code><span>Dreams</span></a></li><li><a href="departamentos.html#dp-34"><code>DP-34</code><span>Departamento interno de animações animadas da Bry</span></a></li><li><a href="departamentos.html#dp-03"><code>DP-03</code><span>Departamento de coleta de dejetos</span></a></li><li><a href="departamentos.html#dp-24"><code>DP-24</code><span>Departamento de pessoas a se acalmar</span></a></li><li><a href="departamentos.html#dp-89"><code>DP-89</code><span>Departamento de massagem nas costas de corpos masculinos</span></a></li><li><a href="departamentos.html#dp-06"><code>DP-06</code><span>Departamento de regulamentação de mochilas infantis</span></a></li></ul>
 </aside>
 </div>
 

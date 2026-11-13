@@ -152,8 +152,14 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
   font-style:normal;font-size:15px;letter-spacing:.04em}
 .sheet-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 24px;margin-top:20px;padding-top:8px;
   border-top:1px solid var(--paper-rule);font:11px/1.4 var(--f-mono);color:var(--paper-dim)}
-.pager{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-size:13px}
-.pager a:last-child:not(:first-child){margin-left:auto}
+.reader{max-width:700px}
+.pager{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:4px 16px;margin-top:22px;padding:10px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-size:13px}
+.pager a{display:block;text-decoration:none;color:var(--fg-hi)}
+.pager a:hover span{text-decoration:underline;text-underline-offset:2px}
+.pager small{display:block;font:11px var(--f-mono);color:var(--fg-dim)}
+.pager .prev{grid-column:1;text-align:left}
+.pager .idx{grid-column:2;text-align:center}
+.pager .next{grid-column:3;text-align:right}
 
 .foot{padding:16px 28px 22px;border-top:4px double var(--rule-strong);font-size:11px;color:var(--fg-dim)}
 .foot p{margin:0 0 3px}
@@ -187,6 +193,10 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
   .lh-no{text-align:left}
   .sheet h1{font-size:19px}
   .nav a{padding:10px 12px}
+  .pager{grid-template-columns:1fr 1fr}
+  .pager .idx{grid-column:1/-1;grid-row:2;text-align:left;padding-top:8px;border-top:1px solid var(--rule-soft)}
+  .pager .prev{grid-column:1;grid-row:1}
+  .pager .next{grid-column:2;grid-row:1}
 }
 </style>
 </head>
@@ -199,9 +209,7 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
 <nav class="nav" aria-label="Principal"><a href="index.html">Início</a><a href="departamentos.html">Departamentos</a><a href="episodios.html" aria-current="page">Episódios</a></nav>
 <main class="content">
 
-<div class="archive">
-<aside class="side" aria-label="Seleção de episódios"><ul><li><a href="episodio-1.html"><b>Bry: The Short #1</b><small>03/02/2011</small></a></li><li><a href="episodio-2.html"><b>Bry: The Short #2</b><small>30/09/2013</small></a></li><li><a href="episodio-3.html"><b>Bry: The Short #3</b><small>11/05/2016</small></a></li><li><a href="episodio-4.html"><b>Bry: The Short #4</b><small>02/03/2017</small></a></li><li><a href="episodio-5.html"><b>Bry: The Short #5</b><small>19/10/2017</small></a></li><li><a href="episodio-6.html" aria-current="page"><b>Bry: The Short #6</b><small>08/06/2018</small></a></li><li><a href="episodio-7.html"><b>Bry: The Short #7</b><small>23/01/2019</small></a></li><li><a href="episodio-8.html"><b>Bry: The Short #8</b><small>14/09/2019</small></a></li><li><a href="episodio-9.html"><b>Bry: The Short #9</b><small>27/04/2020</small></a></li><li><a href="episodio-10.html"><b>Bry: The Short #10</b><small>03/12/2020</small></a></li><li><a href="episodio-11.html"><b>Bry: The Short #11</b><small>21/07/2021</small></a></li><li><a href="episodio-12.html"><b>Bry: The Short #12</b><small>10/02/2022</small></a></li><li><a href="episodio-13.html"><b>Bry: The Short #13</b><small>29/08/2022</small></a></li><li><a href="episodio-14.html"><b>Bry: The Short #14</b><small>16/03/2023</small></a></li><li><a href="episodio-15.html"><b>Bry: The Short #15</b><small>05/11/2023</small></a></li><li><a href="episodio-16.html"><b>Bry: The Short #16</b><small>24/06/2024</small></a></li><li><a href="episodio-17.html"><b>Bry: The Short #17</b><small>12/12/2024</small></a></li><li><a href="episodio-18.html"><b>Bry: The Short #18</b><small>30/04/2025</small></a></li><li><a href="episodio-19.html"><b>Bry: The Short #19</b><small>11/11/2025</small></a></li><li><a href="episodio-20.html"><b>Bry: The Short #20</b><small>17/04/2026</small></a></li></ul></aside>
-<div>
+<div class="reader">
 <article class="sheet">
 <div class="lh">
 <div class="lh-org"><b>Bry</b><span>Arquivo Geral · Série Bry: The Short</span></div>
@@ -230,8 +238,7 @@ h1.series{font-size:42px;line-height:1.15;margin-bottom:10px}
 <div class="stamp-row"><div class="datestamp">Arquivo Geral<em>22/06/2018</em>Arquivado</div></div>
 <div class="sheet-foot"><span>Cx. 02 · Pasta 05 · Página 1 de 1</span><span>Fim do documento</span></div>
 </article>
-<div class="pager"><a href="episodio-5.html">← Bry: The Short #5</a><a href="episodio-7.html">Bry: The Short #7 →</a></div>
-</div>
+<nav class="pager" aria-label="Navegação entre episódios"><a class="prev" href="episodio-5.html"><span>← Episódio anterior</span><small>Bry: The Short #5</small></a><a class="idx" href="episodios.html"><span>Voltar ao índice de episódios</span></a><a class="next" href="episodio-7.html"><span>Próximo episódio →</span><small>Bry: The Short #7</small></a></nav>
 </div>
 
 </main>
